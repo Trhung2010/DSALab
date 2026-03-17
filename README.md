@@ -121,6 +121,9 @@ make clean  # Xóa file đã build
 
 ## 📌 Quy Trình Fork và Nộp Bài
 
+### 6. Mẫu hướng dẫn ngắn gửi cho sinh viên
+
+```text
 Huong dan nop bai DSALab
 
 1. Fork repo goc:
@@ -130,9 +133,11 @@ Huong dan nop bai DSALab
 
 3. Lam bai dung thu muc duoc yeu cau
 
-4. Sau khi hoan thanh, commit va push len GitHub ca nhan
+4. Commit day du va dat noi dung commit ro rang
 
-5. Nop bai bang mot trong hai cach:
+5. Push len repo GitHub ca nhan
+
+6. Nop bai bang mot trong hai cach:
    - Tao Pull Request ve repo goc
    - Hoac gui link repo fork len he thong hoc tap
 
