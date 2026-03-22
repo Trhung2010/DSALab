@@ -8,7 +8,6 @@
 ![Chapters](https://img.shields.io/badge/Chapters-6-blueviolet?style=for-the-badge)
 
 **Dự án học liệu C++ toàn diện về Cấu trúc Dữ liệu và Giải thuật**  
-*Dựa trên giáo trình — Cao đẳng Công Thương TP.HCM · 2025*
 
 [📖 Lý thuyết](#-nội-dung-từng-chương) · [💻 Cài đặt](#️-cài-đặt--chạy) · [🗂 Cấu trúc](#-cấu-trúc-dự-án) · [🤝 Đóng góp](#-đóng-góp)
 
