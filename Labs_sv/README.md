@@ -1,6 +1,6 @@
 # DSA Labs C++ — Hướng dẫn thực hành & Học cùng AI
 
-> **Môn:** Cấu Trúc Dữ Liệu & Giải Thuật &nbsp;|&nbsp; **GV:** TVS 
+> **Môn:** Cấu Trúc Dữ Liệu & Giải Thuật &nbsp;|&nbsp; **GV:** T.Coc 
 > **Mục tiêu:** Không chỉ code được — mà *hiểu tại sao* và *tự xây dựng ứng dụng riêng*
 
 ---
