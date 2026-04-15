@@ -4,7 +4,7 @@
 
 - Họ tên: Vương Nguyễn Trường Hưng
 - MSSV: 2124110111
-- Đề tài: Recommendation Engine
+- Đề tài: Conway: game of life
 
 Ứng dụng C++ CLI mô phỏng hệ thống gợi ý đơn giản cho phim / bài hát / sản phẩm. Chương trình ghi nhận lịch sử tương tác của người dùng, phân tích độ tương đồng, sau đó đề xuất item phù hợp theo hai hướng:
 
