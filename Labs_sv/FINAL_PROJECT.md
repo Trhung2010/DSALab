@@ -1,6 +1,6 @@
 # FINAL PROJECT — Cấu Trúc Dữ Liệu & Giải Thuật
 
-> **Môn:** Cấu Trúc Dữ Liệu & Giải Thuật &nbsp;|&nbsp; **GV:** Trần Anh Khoa  
+> **Môn:** Cấu Trúc Dữ Liệu & Giải Thuật &nbsp;|&nbsp; **GV:** TVS  
 > **Hình thức:** Cá nhân hoặc nhóm 2 người  
 > **Ngôn ngữ:** C++ (CLI, compile được bằng `g++ -std=c++17`)  
 > **Yêu cầu tối thiểu:** Áp dụng **ít nhất 3** cấu trúc dữ liệu đã học
