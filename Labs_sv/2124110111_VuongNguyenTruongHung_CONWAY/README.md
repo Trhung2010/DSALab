@@ -1,76 +1,76 @@
 # Recommendation Engine
 
-## Thong tin sinh vien
+## Thông tin sinh viên
 
-- Ho ten: Vuong Nguyen Truong Hung
+- Họ tên: Vương Nguyễn Trường Hùng
 - MSSV: 2124110111
-- De tai: Recommendation Engine
+- Đề tài: Recommendation Engine
 
-Ung dung C++ CLI mo phong he thong goi y don gian cho phim / bai hat / san pham. Chuong trinh ghi nhan lich su tuong tac cua nguoi dung, phan tich do tuong dong, sau do de xuat item phu hop theo hai huong:
+Ứng dụng C++ CLI mô phỏng hệ thống gợi ý đơn giản cho phim / bài hát / sản phẩm. Chương trình ghi nhận lịch sử tương tác của người dùng, phân tích độ tương đồng, sau đó đề xuất item phù hợp theo hai hướng:
 
-- Collaborative Filtering: nguoi dung tuong tu cung thich nhung item nao.
-- Item-based Recommendation: item giong voi nhung item ban da thich.
+- Collaborative Filtering: người dùng tương tự cùng thích những item nào.
+- Item-based Recommendation: item giống với những item bạn đã thích.
 
-## Cau truc du lieu su dung
+## Cấu trúc dữ liệu sử dụng
 
 - `Graph`:
-  Dung adjacency list de luu quan he user-item. Moi canh the hien muc do quan tam cua user voi item, phu hop vi bai toan recommendation la bai toan lien ket giua hai tap dinh.
+  Dùng adjacency list để lưu quan hệ user-item. Mỗi cạnh thể hiện mức độ quan tâm của user với item, phù hợp vì bài toán recommendation là bài toán liên kết giữa hai tập đỉnh.
 - `BST`:
-  Dung de luu catalog item theo `id`, ho tro tim kiem item nhanh hon danh sach tuyen tinh va de duyet in-order co thu tu.
+  Dùng để lưu catalog item theo `id`, hỗ trợ tìm kiếm item nhanh hơn danh sách tuyến tính và để duyệt in-order có thứ tự.
 - `Priority Queue (Heap)`:
-  Dung de xep hang goi y theo diem relevance va lay Top-N nhanh, dap ung yeu cau cau truc du lieu dang Heap.
+  Dùng để xếp hạng gợi ý theo điểm relevance và lấy Top-N nhanh, đáp ứng yêu cầu cấu trúc dữ liệu dạng Heap.
 - `unordered_map`:
-  Dung de luu lich su tuong tac cua user va chi muc item-user, truy cap trung binh O(1).
+  Dùng để lưu lịch sử tương tác của user và chỉ mục item-user, truy cập trung bình O(1).
 
-## Chuc nang
+## Chức năng
 
-1. Them nguoi dung moi.
-2. Them item vao catalog.
-3. Ghi nhan hanh dong `view`, `like`, `rating`.
-4. Tim item trong BST theo ID.
-5. Hien thi catalog.
-6. Goi y theo nguoi dung tuong tu.
-7. Goi y theo item tuong tu.
-8. Hien thi Top-N goi y tong hop.
-9. Bao cao thong ke.
-10. Xem lich su nguoi dung.
-11. Nap du lieu mau de demo.
+1. Thêm người dùng mới.
+2. Thêm item vào catalog.
+3. Ghi nhận hành động `view`, `like`, `rating`.
+4. Tìm item trong BST theo ID.
+5. Hiển thị catalog.
+6. Gợi ý theo người dùng tương tự.
+7. Gợi ý theo item tương tự.
+8. Hiển thị Top-N gợi ý tổng hợp.
+9. Báo cáo thống kê.
+10. Xem lịch sử người dùng.
+11. Nạp dữ liệu mẫu để demo.
 
-## Thiet ke file
+## Thiết kế file
 
 ```text
 src/
-  main.cpp       - Menu va dieu khien chuong trinh
-  structures.h   - Khai bao struct, class, prototype
-  functions.cpp  - Cai dat cac cau truc du lieu va thuat toan
+  main.cpp       - Menu và điều khiển chương trình
+  structures.h   - Khai báo struct, class, prototype
+  functions.cpp  - Cài đặt các cấu trúc dữ liệu và thuật toán
 tests/
-  test_cases.cpp - Bo test co ban va edge cases
+  test_cases.cpp - Bộ test cơ bản và edge cases
 docs/
   .gitkeep
-README.md        - Mo ta ung dung va huong dan chay
+README.md        - Mô tả ứng dụng và hướng dẫn chạy
 ```
 
-## Compile va chay
+## Compile và chạy
 
-Build chuong trinh chinh:
+Build chương trình chính:
 
 ```bash
 g++ -std=c++17 src/main.cpp src/functions.cpp -o app
 ./app
 ```
 
-Build bo test:
+Build bộ test:
 
 ```bash
 g++ -std=c++17 tests/test_cases.cpp src/functions.cpp -o test_app
 ./test_app
 ```
 
-## Test cases chinh
+## Test cases chính
 
-1. Them user va item, kiem tra catalog duoc sap xep theo BST.
-2. Tim kiem item ton tai / khong ton tai.
-3. Ghi nhan `view`, `like`, `rating` va kiem tra so lieu cap nhat dung.
-4. Tao goi y tren du lieu mau va dam bao co ket qua hop le.
-5. Test edge case: ID rong, user/item khong ton tai, rating ngoai mien hop le.
-6. Test thong ke item pho bien va user hoat dong.
+1. Thêm user và item, kiểm tra catalog được sắp xếp theo BST.
+2. Tìm kiếm item tồn tại / không tồn tại.
+3. Ghi nhận `view`, `like`, `rating` và kiểm tra số liệu cập nhật đúng.
+4. Tạo gợi ý trên dữ liệu mẫu và đảm bảo có kết quả hợp lệ.
+5. Test edge case: ID rỗng, user/item không tồn tại, rating ngoài miền hợp lệ.
+6. Test thống kê item phổ biến và user hoạt động.
